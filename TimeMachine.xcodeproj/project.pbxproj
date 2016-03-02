@@ -14,6 +14,8 @@
 		840BC6F91C84CB9600CCE388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840BC6F71C84CB9600CCE388 /* LaunchScreen.storyboard */; };
 		840BC7041C84CB9600CCE388 /* TimeMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC7031C84CB9600CCE388 /* TimeMachineTests.swift */; };
 		840BC70F1C84CB9700CCE388 /* TimeMachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC70E1C84CB9700CCE388 /* TimeMachineUITests.swift */; };
+		840BC71E1C851F7E00CCE388 /* MsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC71C1C851F7E00CCE388 /* MsgCell.swift */; };
+		840BC71F1C851F7E00CCE388 /* MsgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840BC71D1C851F7E00CCE388 /* MsgCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		840BC70A1C84CB9700CCE388 /* TimeMachineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeMachineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840BC70E1C84CB9700CCE388 /* TimeMachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMachineUITests.swift; sourceTree = "<group>"; };
 		840BC7101C84CB9700CCE388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840BC71C1C851F7E00CCE388 /* MsgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgCell.swift; sourceTree = "<group>"; };
+		840BC71D1C851F7E00CCE388 /* MsgCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MsgCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				840BC6EE1C84CB9600CCE388 /* AppDelegate.swift */,
 				840BC6F01C84CB9600CCE388 /* ViewController.swift */,
 				840BC6F21C84CB9600CCE388 /* Main.storyboard */,
+				840BC71C1C851F7E00CCE388 /* MsgCell.swift */,
+				840BC71D1C851F7E00CCE388 /* MsgCell.xib */,
 				840BC6F51C84CB9600CCE388 /* Assets.xcassets */,
 				840BC6F71C84CB9600CCE388 /* LaunchScreen.storyboard */,
 				840BC6FA1C84CB9600CCE388 /* Info.plist */,
@@ -232,6 +238,7 @@
 				840BC6F91C84CB9600CCE388 /* LaunchScreen.storyboard in Resources */,
 				840BC6F61C84CB9600CCE388 /* Assets.xcassets in Resources */,
 				840BC6F41C84CB9600CCE388 /* Main.storyboard in Resources */,
+				840BC71F1C851F7E00CCE388 /* MsgCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840BC71E1C851F7E00CCE388 /* MsgCell.swift in Sources */,
 				840BC6F11C84CB9600CCE388 /* ViewController.swift in Sources */,
 				840BC6EF1C84CB9600CCE388 /* AppDelegate.swift in Sources */,
 			);
