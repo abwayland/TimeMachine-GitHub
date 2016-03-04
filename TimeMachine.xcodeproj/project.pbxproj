@@ -15,6 +15,7 @@
 		840BC7041C84CB9600CCE388 /* TimeMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC7031C84CB9600CCE388 /* TimeMachineTests.swift */; };
 		840BC70F1C84CB9700CCE388 /* TimeMachineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC70E1C84CB9700CCE388 /* TimeMachineUITests.swift */; };
 		840BC71E1C851F7E00CCE388 /* MsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840BC71C1C851F7E00CCE388 /* MsgCell.swift */; };
+		842807961C8A1F3E001FEA61 /* AnsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842807951C8A1F3E001FEA61 /* AnsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		840BC70E1C84CB9700CCE388 /* TimeMachineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMachineUITests.swift; sourceTree = "<group>"; };
 		840BC7101C84CB9700CCE388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840BC71C1C851F7E00CCE388 /* MsgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MsgCell.swift; sourceTree = "<group>"; };
+		842807951C8A1F3E001FEA61 /* AnsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				840BC6EE1C84CB9600CCE388 /* AppDelegate.swift */,
 				840BC6F01C84CB9600CCE388 /* ViewController.swift */,
 				840BC6F21C84CB9600CCE388 /* Main.storyboard */,
+				842807951C8A1F3E001FEA61 /* AnsCell.swift */,
 				840BC71C1C851F7E00CCE388 /* MsgCell.swift */,
 				840BC6F51C84CB9600CCE388 /* Assets.xcassets */,
 				840BC6F71C84CB9600CCE388 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				840BC71E1C851F7E00CCE388 /* MsgCell.swift in Sources */,
 				840BC6F11C84CB9600CCE388 /* ViewController.swift in Sources */,
+				842807961C8A1F3E001FEA61 /* AnsCell.swift in Sources */,
 				840BC6EF1C84CB9600CCE388 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

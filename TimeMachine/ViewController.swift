@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var buttonD: UIButton!
     
     @IBAction func buttonPressed(sender: UIButton) {
-        let playerMsg = msg(sender: "player", message: (sender.titleLabel?.text!)!)
+        let playerMsg = msg(sender: "player", message: (sender.titleLabel?.text!)!, ans: false, ansArr: nil)
         introArray.append(playerMsg)
         if introArray.count > 20 {
             introArray.removeFirst()
@@ -28,15 +28,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    let msg01 = msg(sender: "friend", message: "Hello?")
-    let msg02 = msg(sender: "friend", message: "You there?")
-    let msg03 = msg(sender: "friend", message: "This is a really long message which is going to do what?")
+    let msg01 = msg(sender: "friend", message: "Hello?", ans: false, ansArr: nil)
+    let msg02 = msg(sender: "friend", message: "You there?", ans: false,    ansArr: nil)
+    let msg03 = msg(sender: "friend", message: "This is a really long message which is going to do what?", ans: false, ansArr: nil)
+    let msg04 = msg(sender: "player", message: "Blah.", ans: true, ansArr: ["Hello","Who are you?","What is your name?","Go North"])
     
     var introArray = [msg]()
     
     struct msg {
         var sender: String
         var message: String
+        var ans: Bool
+        var ansArr: [String]?
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,28 +47,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("msgCell") as! MsgCell
-//        for subview in cell.contentView.subviews {
-//            subview.removeFromSuperview()
-//        }
+        
         let msg = introArray[indexPath.row]
         
-//        let msgRect = CGRect(x: 0, y: 0, width: 0.75 * tableView.bounds.size.width, height: 0.75 * cell.bounds.size.height)
-        
-        cell.msgLabel.text = msg.message
-        if msg.sender == "friend" {
-            cell.msgLabel.textColor = UIColor.blackColor()
-            cell.msgLabel.textAlignment = NSTextAlignment.Left
-            cell.balloonView.backgroundColor = UIColor.lightGrayColor()
+        if msg.ans == false {
+            let cell = tableView.dequeueReusableCellWithIdentifier("msgCell") as! MsgCell
+            cell.msgLabel.text = msg.message
+            if msg.sender == "friend" {
+                cell.msgLabel.textColor = UIColor.blackColor()
+                cell.msgLabel.textAlignment = NSTextAlignment.Left
+                cell.balloonView.backgroundColor = UIColor.lightGrayColor()
+            } else {
+                cell.msgLabel.textColor = UIColor.whiteColor()
+                cell.msgLabel.textAlignment = NSTextAlignment.Right
+                cell.balloonView.backgroundColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 0.5)
+            }
+            return cell
         } else {
-            cell.msgLabel.textColor = UIColor.whiteColor()
-            cell.msgLabel.textAlignment = NSTextAlignment.Right
-            cell.balloonView.backgroundColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 0.5)
+            let cell = tableView.dequeueReusableCellWithIdentifier("ansCell") as! AnsCell
+            cell.buttonA.setTitle(msg.ansArr![0], forState: .Normal)
+            cell.buttonB.setTitle(msg.ansArr![1], forState: .Normal)
+            cell.buttonC.setTitle(msg.ansArr![2], forState: .Normal)
+            cell.buttonD.setTitle(msg.ansArr![3], forState: .Normal)
+            return cell
         }
         
-//        msgLabel.frame.origin.x = msg.sender == "friend" ? msgLabel.frame.origin.x + 10 : msgLabel.frame.origin.x - 10
-        
-        return cell
     }
     
     func configureTableView() {
@@ -75,7 +81,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        introArray = [msg01,msg02,msg03]
+        introArray = [msg01,msg02,msg03,msg04]
         configureTableView()
     }
 
