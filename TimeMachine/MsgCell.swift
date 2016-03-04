@@ -8,7 +8,11 @@
 
 import UIKit
 
+
 class MsgCell: UITableViewCell {
+
+    @IBOutlet weak var msgLabel: UILabel!
+    @IBOutlet weak var balloonView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,10 +22,6 @@ class MsgCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
     }
     
 }
